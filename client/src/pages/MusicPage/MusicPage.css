@@ -1,0 +1,241 @@
+/* Stars 
+------------------------------------- */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Press+Start+2P&display=swap');
+
+
+
+.cards {
+  overflow-y:scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#space, .stars {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-color: black; */
+    background: url("bg1.jpg") repeat ;
+  }
+  
+  .stars {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: zoom 2s;
+    opacity: 0;
+  }
+  
+  .stars:nth-child(1) {
+    background-position: 50% 50%;
+    animation-delay: 0s;
+  }
+  .stars:nth-child(2) {
+    background-position: 20% 60%;
+    animation-delay: 500ms;
+  }
+  .stars:nth-child(3) {
+    background-position: -20% -30%;
+    animation-delay: 1s;
+  }
+  .stars:nth-child(4) {
+    background-position: 40% -80%;
+    animation-delay: 1500ms;
+  }
+  .stars:nth-child(5) {
+    background-position: -20% 30%;
+    animation-delay: 2s;
+  }
+  .stars:nth-child(6) {
+    background-position: 40% -80%;
+    animation-delay: 2500ms;
+  }
+  .stars:nth-child(7) {
+    background-position: -20% 30%;
+    animation-delay: 3s;
+  }
+  .stars:nth-child(8) {
+    background-position: -20% 30%;
+    animation-delay: 3500ms;
+  }
+  .stars:nth-child(9) {
+    background-position: 40% -80%;
+    animation-delay: 4s;
+  }
+  
+
+
+  .play{
+   
+      background: rgb(230, 47, 230);
+      width: 50px;
+      height: 50px;
+      border: solid 5px rgb(230, 47, 230);
+      border-radius: 100%;
+      position: relative; 
+      text-indent:-9999px;
+      box-shadow: 1px 1px 3px #999999;
+    
+  }
+
+  .play span {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 20px solid black;
+    border-bottom: 15px solid transparent;
+    position:absolute;
+    top: 17%;
+    left:36%;    
+  }
+
+  .welcome {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    position: absolute;
+    top: 50%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid plum; */
+    animation: zoom_3 5s;
+    opacity: 0;
+  }
+
+  .title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    color: rgb(196, 190, 216);
+    width:100%;
+    display: flex;
+    justify-content: center;
+    
+    animation: zoom_2 6s;
+  }
+
+  .caption {
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(14, 9, 112);
+    width:100%;
+    display: flex;
+    justify-content: center;
+    
+    animation: zoom_2 6s;
+  }
+
+  @keyframes zoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.7);
+      animation-timing-function: ease-in;
+    } 
+    85% {
+      opacity: 1;
+      transform: scale(2.8);
+      animation-timing-function: linear;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(3.5);
+    }
+  }
+
+  @keyframes zoom_2 {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+      animation-timing-function:step-end;
+    } 
+    
+    100% {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+  }
+  
+  @keyframes zoom_3 {
+    0% {
+      opacity: 0;
+      transform: scale(0.7);
+      animation-timing-function: ease-in;
+    } 
+    85% {
+      opacity: 1;
+      transform: scale(2.8);
+      animation-timing-function: linear;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(3.0);
+    }
+  }
+  
+  
+
+  .container {
+    position:relative;
+  }
+  .container:hover::before, .container:active::before {
+    background-color:rgba(0,0,0,0.5);
+    
+  }
+ 
+  .container button {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity:0;
+  } 
+  .container:hover button, .container:active button {   
+    opacity: 1;
+  }
+  
+  .row1 {
+    display: inline-block;
+    /* justify-content: center; */
+    width: 100vw;
+    left: 3vw;
+    /* height: 200px; */
+    
+  }
+
+  #empty {
+    position: relative;
+    animation: zoom_2 6s; 
+    width:100%;
+    max-width: 200px;
+  }
+
+  #mainchar {
+    position: relative;
+    animation: zoom_2 6s; 
+    width:100%;
+    max-width: 200px;
+  }
+
+  #card {
+    position: relative;
+    animation: zoom_2 6s; 
+    width:100%;
+    max-width: 200px;
+  }
+
+  
