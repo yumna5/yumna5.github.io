@@ -106,12 +106,14 @@
   .welcome {
     font-family: 'Press Start 2P', cursive;
     color: white;
-    position: absolute;
-    top: 50%;
+    /* position: absolute;*/
+    top: 50%; 
     width:100%;
     display: flex;
     justify-content: center;
-    /* border: 2px solid plum; */
+    position: relative;
+    align-items:center;
+    text-align: center;  
     animation: zoom_3 5s;
     opacity: 0;
   }
