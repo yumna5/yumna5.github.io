@@ -44,7 +44,7 @@ const MusicPage = () => {
                     <div className="stars"></div>
 
                   
-                    <div className="welcome"> WELCOME TO MY MUSIC PORTAL </div>
+                    {/* <div className="welcome"> WELCOME TO MY MUSIC PORTAL </div> */}
                     <div className="title"> MUSIC MOODZ </div>
                     <div className="caption">Choose a mood from the cards below for the perfect playlist</div> 
                    

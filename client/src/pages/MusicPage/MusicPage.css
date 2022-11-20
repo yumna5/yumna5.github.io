@@ -103,20 +103,20 @@
     left:36%;    
   }
 
-  .welcome {
+  /* .welcome {
     font-family: 'Press Start 2P', cursive;
     color: white;
-    /* position: absolute;*/
+    position: absolute;
     top: 50%; 
     width:100%;
     display: flex;
     justify-content: center;
-    position: relative;
     align-items:center;
     text-align: center;  
+    
     animation: zoom_3 5s;
     opacity: 0;
-  }
+  } */
 
   .title {
     font-family: 'Press Start 2P', cursive;
